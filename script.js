@@ -27,6 +27,7 @@ function renderTasks() {
 }
 
 function addTask() {
+  alert("clicked");
   let input = document.getElementById("taskInput");
 
   if (input.value === "") {
