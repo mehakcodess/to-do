@@ -7,8 +7,7 @@ function renderTasks() {
   tasks.forEach((task, index) => {
     let li = document.createElement("li");
 
-    li.innerHTML = `li.innerHTML = `
-  <span class="task-text ${task.done ? 'done' : ''}"
+    li.innerHTML = <span class="task-text ${task.done ? 'done' : ''}"
     onclick="toggleTask(${index})">
     ${task.text}
   </span>
@@ -28,7 +27,6 @@ function renderTasks() {
 }
 
 function addTask() {
-  alert ("clicked"); // ADD HERE
   let input = document.getElementById("taskInput");
 
   if (input.value === "") {
