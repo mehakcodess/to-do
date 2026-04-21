@@ -1,4 +1,3 @@
-alert("JS connected");
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
 function renderTasks() {
@@ -9,15 +8,15 @@ function renderTasks() {
     let li = document.createElement("li");
 
     li.innerHTML = `
-      <span class="task-text ${task.done ? 'done' : ''}" onclick="toggleTask(${index})">
-        ${task.text}
-      </span>
-      <div>
-      <button onclick="edittask(${index})">✏️</button>
-      <button onclick="deleteTask(${index})">
-        ❌</button>
-        </div>
-    `;
+  <span class="task-text ${task.done ? 'done' : ''}" onclick="toggleTask(${index})">
+    ${task.text}
+  </span>
+
+  <div>
+    <button onclick="editTask(${index})">✏️</button>
+    <button onclick="deleteTask(${index})">❌</button>
+  </div>
+`;
 
     list.appendChild(li);
   });
