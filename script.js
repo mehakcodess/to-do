@@ -7,16 +7,13 @@ function renderTasks() {
   tasks.forEach((task, index) => {
     let li = document.createElement("li");
 
-    li.innerHTML = <span class="task-text ${task.done ? 'done' : ''}"
-    onclick="toggleTask(${index})">
-    ${task.text}
-  </span>
+    li.innerHTML = `
+      <span class="task-text ${task.done ? 'done' : ''}" onclick="toggleTask(${index})">
+        ${task.text}
+      </span>
 
-  <button class="delete-btn" onclick="deleteTask(${index})">
-    ❌
-  </button>
-`;
-      
+      <button class="delete-btn" onclick="deleteTask(${index})">
+        ❌
       </button>
     `;
 
@@ -27,10 +24,9 @@ function renderTasks() {
 }
 
 function addTask() {
-  alert("clicked");
   let input = document.getElementById("taskInput");
 
-  if (input.value === "") {
+  if (input.value.trim() === "") {
     alert("Enter a task");
     return;
   }
