@@ -12,10 +12,11 @@ function renderTasks() {
       <span class="task-text ${task.done ? 'done' : ''}" onclick="toggleTask(${index})">
         ${task.text}
       </span>
-
-      <button class="delete-btn" onclick="deleteTask(${index})">
-        ❌
-      </button>
+      <div>
+      <button onclick="edittask(${index})">✏️</button>
+      <button onclick="deleteTask(${index})">
+        ❌</button>
+        </div>
     `;
 
     list.appendChild(li);
@@ -49,3 +50,11 @@ function toggleTask(index) {
 }
 
 renderTasks();
+function editTask(index) {
+  let newText = prompt("Edit your task:", tasks[index].text);
+
+  if (newText === null || newText.trim() === "") return;
+
+  tasks[index].text = newText;
+  renderTasks();
+}
