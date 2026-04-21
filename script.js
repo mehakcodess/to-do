@@ -7,14 +7,17 @@ function renderTasks() {
   tasks.forEach((task, index) => {
     let li = document.createElement("li");
 
-    li.innerHTML = `
-      <span style="cursor:pointer; ${task.done ? 'text-decoration: line-through;' : ''}"
-        onclick="toggleTask(${index})">
-        ${task.text}
-      </span>
+    li.innerHTML = `li.innerHTML = `
+  <span class="task-text ${task.done ? 'done' : ''}"
+    onclick="toggleTask(${index})">
+    ${task.text}
+  </span>
 
-      <button onclick="deleteTask(${index})">
-        ❌
+  <button class="delete-btn" onclick="deleteTask(${index})">
+    ❌
+  </button>
+`;
+      
       </button>
     `;
 
