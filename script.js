@@ -13,7 +13,7 @@ function renderTasks() {
   </span>
 
   <div>
-    <button onclick="editTask(${index})">✏️</button>
+    <button onclick="editTask(${index});">✏️</button>
     <button onclick="deleteTask(${index})">❌</button>
   </div>
 `;
