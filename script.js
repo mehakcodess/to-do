@@ -28,6 +28,7 @@ function renderTasks() {
 }
 
 function addTask() {
+  alert ("clicked"); // ADD HERE
   let input = document.getElementById("taskInput");
 
   if (input.value === "") {
