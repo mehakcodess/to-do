@@ -1,3 +1,4 @@
+alert("JS connected");
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
 function renderTasks() {
